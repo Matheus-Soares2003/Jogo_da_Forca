@@ -23,7 +23,6 @@ def desenho_inicial(pal):
             print("", end=' ') 
 
 
-
 def desenhar_boneco(erros = 0):
     pass
 
