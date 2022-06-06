@@ -1,8 +1,4 @@
-from itertools import count
-from operator import indexOf
 from os import system
-
-from numpy import index_exp
 
 def separar_letras(pal):
     letras = []
