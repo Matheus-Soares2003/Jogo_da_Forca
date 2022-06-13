@@ -3,7 +3,7 @@ from os import system
 def separar_letras(pal):
     letras = []
     for l in pal:
-        if l.isalpha() or l == " ":
+        if l.isalpha() or l == " " or l == "-":
             letras.append(l)
     return letras
 
@@ -29,6 +29,8 @@ def escrever_letra(l_adivinhada, palavra): #[c,e,s,t,o]
             letras.append("_")
         elif p == " ":
             letras.append(" ")
+        elif p == "-":
+            letras.append("-")
 
     for valor in palavra:
         if valor in resp_letras:

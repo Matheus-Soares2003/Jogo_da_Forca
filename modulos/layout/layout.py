@@ -21,6 +21,8 @@ def desenho_inicial(pal):
             print("_", end=' ')
         elif l == " ":
             print("", end=' ') 
+        elif l == "-":
+            print("-", end=' ')
 
 
 def desenhar_boneco(erros = 0):
