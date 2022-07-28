@@ -5,19 +5,14 @@ def separar_letras(pal):
     for l in pal:
         if l.isalpha() or l == " " or l == "-":
             letras.append(l)
-    return letras
-
-
-def tem_letra(letra, pal):
-    cont = 0
-    for l in pal:
-        if letra == l:
-            cont += 1
-    
-    if cont > 0:
-        return True
+            
+    try:
+        if letras[-1].isspace():
+            letras.pop()
+    except IndexError:
+        pass
     else:
-        return False
+        return letras
 
 
 def escrever_letra(l_adivinhada, palavra): #[c,e,s,t,o]
@@ -52,5 +47,5 @@ def escrever_letra(l_adivinhada, palavra): #[c,e,s,t,o]
                     quant_letras -= 1
 
     return letras
-    
-    
+
+

@@ -23,6 +23,8 @@ def desenho_inicial(pal):
             print("", end=' ') 
         elif l == "-":
             print("-", end=' ')
+        else:
+            print("")
 
 
 def mostra_letra_errada(lista_letras):
