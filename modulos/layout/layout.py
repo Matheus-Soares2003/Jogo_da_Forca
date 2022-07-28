@@ -25,14 +25,9 @@ def desenho_inicial(pal):
             print("-", end=' ')
 
 
-def desenhar_boneco(erros = 0):
-    pass
-
-
-
-def tela_derrota():
-    pass
-
-
-def tela_vitoria():
-    pass
+def mostra_letra_errada(lista_letras):
+    for c in range(len(lista_letras)):
+        if c < len(lista_letras) - 1:
+            print(f"\033[1;34m{lista_letras[c]}\033[m", end='-')
+        else:
+            print(f"\033[1;34m{lista_letras[c]}\033[m", end='\n')

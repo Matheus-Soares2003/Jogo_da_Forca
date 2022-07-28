@@ -46,11 +46,7 @@ while True:
                         player["letras_erradas"] += letra_jogador
 
                     player["lista_letras"] = escrever_letra(player["letras_adivinhadas"], resposta)
-                    for c in range(0, len(player["letras_erradas"])):
-                        if c < len(player["letras_erradas"]) - 1:
-                            print(f"\033[1;34m{player['letras_erradas'][c]}\033[m", end='-')
-                        else:
-                            print(f"\033[1;34m{player['letras_erradas'][c]}\033[m", end='\n')
+                    mostra_letra_errada(player["letras_erradas"])
 
                     for l in player["lista_letras"]:
                         print(l, end = ' ')
@@ -59,7 +55,7 @@ while True:
             if player["lista_letras"] == resposta:
                 print(f"\nVOCÊ VENCEU!! A palavra era {''.join(resposta)}")        
             else:
-                print(f"\nVOCÊ PERDEU! A palvra era {''.join(resposta)}")                
+                print(f"\nVOCÊ PERDEU! A palavra era {''.join(resposta)}")                
             
             continuar = str(input("Jogar denovo? [S/N]: ")).strip().upper()[0]
             system("cls")
