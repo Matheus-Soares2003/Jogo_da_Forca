@@ -3,26 +3,21 @@ def linha():
 
 
 def cabecalho(titulo = "Jogo"):
-    print("=" * 30)
+    linha()
     print(f"\t{titulo}")
-    print("=" * 30)
+    linha()
 
 
 def lista_opcoes(lista = ["Undefined", "Undefined", "Undefined"]):
     copia_lista = lista.copy()
     for indice, valor in enumerate(copia_lista):
         print(f"{indice + 1} -> {valor}")
-    print("=" * 30)
+    linha()
 
 
-def desenho_inicial(pal):
+def mostra_letras(pal):
     for l in pal:
-        if l.isalpha():
-            print("_", end=' ')
-        elif l == " ":
-            print("", end=' ') 
-        elif l == "-":
-            print("-", end=' ')
+        print(l, end = ' ')
 
 
 def mostra_letra_errada(lista_letras):
