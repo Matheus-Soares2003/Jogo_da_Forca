@@ -17,7 +17,7 @@ def lista_opcoes(lista = ["Undefined", "Undefined", "Undefined"]):
 
 def mostra_letras(pal):
     for l in pal:
-        print(l, end = ' ')
+        print(l.upper(), end = ' ')
 
 
 def mostra_letra_errada(lista_letras):
