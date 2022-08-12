@@ -3,7 +3,7 @@ from random import randint
 
 def separar_letras(pal):
     letras = []
-    acentos = {'a':'áàâã', 'e':'éê', 'i':'í', 'o':'óõô', 'u':'ú'}
+    acentos = {'a':'áàâã', 'e':'éê', 'i':'í', 'o':'óõô', 'u':'ú', 'ç': 'ç'}
     for l in pal:
         for k, v in acentos.items():
             if l in v:
@@ -66,14 +66,17 @@ def ganhou_perdeu(resp, pal, jogador):
 
 
 def escolhaPC(tema = 0):
-    lista_filmes = []
+    lista_animacoes = []
+    lista_jogos = []
     try:
         if tema == 1:
             with open("modulos/funcionalidade/pc-palavras/Animacoes.txt", "r") as arq:
-                lista_filmes = arq.readlines()
-                filme_escolhido = lista_filmes[randint(0, 69)]
+                lista_animacoes = arq.readlines()
+                filme_escolhido = lista_animacoes[randint(0, 90)]
         elif tema == 2:
-            pass
+            with open("modulos/funcionalidade/pc-palavras/Jogos.txt", "r") as arq:
+                lista_jogos = arq.readlines()
+                filme_escolhido = lista_jogos[randint(0, 165)]
         elif tema == 3:
             pass
         elif tema == 4:
