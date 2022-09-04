@@ -7,10 +7,10 @@ while True:
     system("cls")
     continuar = 'S'
     cabecalho("Jogo da Forca")
-    lista_opcoes(["Jogar contra outra pessoa", "Jogar contra o computador", "Instruções", "Sair"])
+    lista_opcoes(["Jogar contra outra pessoa", "Jogar contra o computador", "Sair"])
     try:
         opcao = int(input("Opção: "))
-        while opcao < 1 or opcao > 4:
+        while opcao < 1 or opcao > 3:
             print("ERRO! Opção Inválida. Tente Novamente...")
             opcao = int(input("Opção: "))
     except:
@@ -145,10 +145,6 @@ while True:
                         sleep(0.6)
                         continuar = str(input("Jogar Denovo? [S/N]")).strip().upper()[0]
                 
-            
-        #Instruções
-        elif opcao == 3:
-            pass
         #Sair
         elif opcao == 4:
             print("Saindo...")

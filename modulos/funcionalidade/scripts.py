@@ -4,11 +4,15 @@ from random import randint
 def separar_letras(pal):
     letras = []
     acentos = {'a':'áàâã', 'e':'éê', 'i':'í', 'o':'óõô', 'u':'ú', 'ç': 'ç'}
+    char_especial = ['!', '@', '#', '$', '%', '¨', '&', '*', "(", ")", "_", "+", "=", '/', '.', ',', ';', '<', '>', '|']
     for l in pal:
         for k, v in acentos.items():
             if l in v:
                 l = k
         if l.isalpha() or l == " " or l == "-":
+            letras.append(l)
+        if l in char_especial:
+            l = " "
             letras.append(l)
             
     try:
