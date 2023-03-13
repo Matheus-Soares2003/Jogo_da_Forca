@@ -146,7 +146,7 @@ while True:
                         continuar = str(input("Jogar Denovo? [S/N]")).strip().upper()[0]
                 
         #Sair
-        elif opcao == 4:
+        elif opcao == 3:
             print("Saindo...")
             sleep(1)
             break

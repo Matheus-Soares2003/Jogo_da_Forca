@@ -80,7 +80,7 @@ def escolhaPC(tema = 0):
         elif tema == 2:
             with open("modulos/funcionalidade/pc-palavras/Jogos.txt", "r") as arq:
                 lista_jogos = arq.readlines()
-                filme_escolhido = lista_jogos[randint(0, 165)]
+                filme_escolhido = lista_jogos[randint(0, 184)]
         elif tema == 3:
             pass
         elif tema == 4:
